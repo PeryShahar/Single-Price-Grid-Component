@@ -1,0 +1,203 @@
+:root {
+  --font-primary: "Karla", sans-serif;
+
+  --color-cyan: hsl(179, 62%, 43%);
+  --color-yellow: hsl(71, 73%, 54%);
+  --color-gray: hsl(204, 43%, 93%);
+  --color-grayish-blue: hsl(218, 22%, 67%);
+  --color-white: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-gray);
+  font-family: var(--font-primary);
+  animation: backgroundColor 3s infinite alternate;
+}
+
+@keyframes backgroundColor {
+  from {
+    background-color: var(--color-gray);
+  }
+  to {
+    background-color: hsla(216, 14%, 61%, 0.61);
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 3em auto;
+  animation: moveContainer 2s;
+  animation: rotate 4s ease-in-out;
+  transition: box-shadow 1s;
+  transition: transform 1s;
+}
+
+.container:hover {
+  box-shadow: 2px 2px 15px rgba(51, 51, 51, 0.418);
+  transform: scale(1.03, 1.03);
+}
+
+@keyframes moveContainer {
+  from {
+    transform: translateY(-200%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateY(0deg);
+  }
+  75% {
+    transform: rotateY(40deg);
+  }
+
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+.box1 {
+  background-color: var(--color-white);
+  padding: 2em;
+  animation: moveBox 3s;
+}
+
+@keyframes moveBox {
+  from {
+    transform: translateX(-200%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+.box1 .box__header {
+  color: var(--color-cyan);
+  padding-bottom: 0.5em;
+}
+
+.box1 .sub__header {
+  color: var(--color-yellow);
+  padding-bottom: 0.8em;
+}
+
+.box1 .box__text {
+  color: var(--color-grayish-blue);
+  opacity: 0.8;
+}
+
+.box2 {
+  background-color: var(--color-cyan);
+  padding: 2em;
+  animation: moveBoxMiddle 3s;
+}
+
+@keyframes moveBoxMiddle {
+  from {
+    transform: translateX(+200%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+.box2 .box__header {
+  color: var(--color-white);
+  font-size: 18px;
+  padding-bottom: 1em;
+  opacity: 0.9;
+}
+
+.box2 .box__text {
+  color: var(--color-gray);
+  padding-top: 0.4em;
+}
+
+.box2 .dollar {
+  color: var(--color-white);
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.box2 .month {
+  color: var(--color-gray);
+  opacity: 0.6;
+}
+
+.box2 button {
+  margin-top: 1em;
+  width: 100%;
+  background-color: var(--color-yellow);
+  color: var(--color-white);
+  padding: 1em;
+  margin-top: 2em;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  box-shadow: 2px 2px 15px rgba(51, 51, 51, 0.329);
+  cursor: pointer;
+  transition: opacity 500ms;
+  border-radius: 5px;
+}
+
+.box2 button:hover {
+  opacity: 0.8;
+}
+
+.box3 {
+  background-color: hsla(179, 62%, 43%, 0.719);
+  padding: 2em;
+  animation: moveBox 3s;
+}
+
+@keyframes moveBox {
+  from {
+    transform: translateX(-200%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+.box3 .box__header {
+  color: var(--color-white);
+  font-size: 18px;
+  padding-bottom: 1em;
+}
+
+.box3 .box__text {
+  color: var(--color-gray);
+  opacity: 0.8;
+  width: 70%;
+}
+
+.box__text {
+  line-height: 1.4;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 10em;
+    max-width: 70%;
+  }
+
+  .box1 {
+    grid-column: span 3;
+  }
+
+  .box1 .box__text {
+    width: 80%;
+  }
+}
