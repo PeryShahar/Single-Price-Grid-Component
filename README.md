@@ -7,5 +7,5 @@
 ### Development
 I have used html, grid, animation, keyframes and more.
 
-### Devsign
+### Design
 The design is from Frontend Mentor.
