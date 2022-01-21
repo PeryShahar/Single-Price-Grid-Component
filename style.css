@@ -72,11 +72,6 @@ body {
   padding: 2em;
   animation: moveBox 3s;
 }
-.box1:hover,
-.box2:hover,
-.box3:hover {
-  box-shadow: 2px 2px 15px rgba(51, 51, 51, 0.418);
-}
 
 @keyframes moveBox {
   from {
@@ -189,6 +184,12 @@ body {
 
 .box__text {
   line-height: 1.4;
+}
+
+.box1:hover,
+.box2:hover,
+.box3:hover {
+  box-shadow: 2px 2px 15px rgba(51, 51, 51, 0.418);
 }
 @media screen and (min-width: 768px) {
   .container {
