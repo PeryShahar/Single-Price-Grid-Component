@@ -177,9 +177,14 @@ body {
 }
 
 .box3 .box__text {
-  color: var(--color-gray);
   opacity: 0.8;
-  width: 70%;
+  width: 80%;
+}
+
+.box3 ul {
+  list-style-type: none;
+  color: var(--color-gray);
+  line-height: 1.4;
 }
 
 .box__text {
